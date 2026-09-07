@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Cafe Laws Coffee — Ngopi, Nongkrong, Nikmati</title>
+
+  <meta
+    name="description"
+    content="Cafe Laws Coffee — tempat ngopi dan nongkrong nyaman di Jl. Setiabudi RT07 RW12. Pesan melalui WhatsApp 089625146521."
+  >
+
+  <!-- Tailwind CSS v4 -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    :root {
+      --coffee: #6f4528;
+      --dark: #1c130d;
+      --cream: #f8f3ea;
+      --gold: #d6a354;
+    }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      background: var(--cream);
+      color: var(--dark);
+    }
+
+    .font-display {
+      font-family: "Playfair Display", serif;
+    }
+
+    .hero-pattern {
+      background:
+        linear-gradient(
+          90deg,
+          rgba(20, 12, 7, .88) 0%,
+          rgba(20, 12, 7, .65) 48%,
+          rgba(20, 12, 7, .25) 100%
+        ),
+        url("https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=2000&q=85")
+        center/cover;
+    }
+
+    .coffee-card {
+      transition: transform .3s ease, box-shadow .3s ease;
+    }
+
+    .coffee-card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 20px 45px rgba(74, 45, 24, .14);
+    }
+
+    .gallery-item {
+      transition: transform .4s ease, filter .4s ease;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.03);
+      filter: brightness(.9);
+    }
+
+    .glass {
+      background: rgba(255,255,255,.08);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(255,255,255,.15);
+    }
+
+    .gold-line {
+      width: 60px;
+      height: 3px;
+      background: var(--gold);
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- =========================================================
+     NAVBAR
+========================================================= -->
+<header class="fixed top-0 left-0 right-0 z-50">
+  <nav class="bg-[#1c130d]/95 backdrop-blur-md border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8">
+      <div class="h-20 flex items-center justify-between">
+
+        <!-- Logo -->
+        <a href="#home" class="flex items-center gap-3">
+          <div class="w-11 h-11 rounded-full bg-[#d6a354] flex items-center justify-center">
+            <span class="text-2xl">☕</span>
+          </div>
+
+          <div>
+            <div class="text-white font-display font-bold text-xl">
+              CAFE LAWS
+            </div>
+            <div class="text-[#d6a354] text-[10px] tracking-[.35em] uppercase">
+              Coffee & Eatery
+            </div>
+          </div>
+        </a>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center gap-8">
+          <a href="#home" class="text-white/80 hover:text-[#d6a354] transition">
+            Home
+          </a>
+
+          <a href="#menu" class="text-white/80 hover:text-[#d6a354] transition">
+            Menu
+          </a>
+
+          <a href="#about" class="text-white/80 hover:text-[#d6a354] transition">
+            Tentang
+          </a>
+
+          <a href="#gallery" class="text-white/80 hover:text-[#d6a354] transition">
+            Galeri
+          </a>
+
+          <a href="#contact" class="text-white/80 hover:text-[#d6a354] transition">
+            Kontak
+          </a>
+
+          <a
+            href="https://wa.me/6289625146521?text=Halo%20Cafe%20Laws%20Coffee%2C%20saya%20ingin%20pesan."
+            target="_blank"
+            class="bg-[#d6a354] text-[#1c130d] px-5 py-2.5 rounded-full font-bold hover:bg-white transition"
+          >
+            Pesan Sekarang
+          </a>
+        </div>
+
+        <!-- Mobile Button -->
+        <button
+          id="mobileButton"
+          class="md:hidden text-white text-2xl"
+          aria-label="Menu"
+        >
+          ☰
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobileMenu" class="hidden pb-5 md:hidden">
+        <div class="flex flex-col gap-4">
+          <a href="#home" class="text-white/80">Home</a>
+          <a href="#menu" class="text-white/80">Menu</a>
+          <a href="#about" class="text-white/80">Tentang</a>
+          <a href="#gallery" class="text-white/80">Galeri</a>
+          <a href="#contact" class="text-white/80">Kontak</a>
+
+          <a
+            href="https://wa.me/6289625146521?text=Halo%20Cafe%20Laws%20Coffee%2C%20saya%20ingin%20pesan."
+            target="_blank"
+            class="bg-[#d6a354] text-[#1c130d] px-5 py-3 rounded-full font-bold text-center"
+          >
+            Pesan Sekarang
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+<section id="home" class="hero-pattern min-h-screen flex items-center pt-20">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 w-full">
+
+    <div class="max-w-3xl">
+
+      <div class="inline-flex items-center gap-2 glass rounded-full px-4 py-2 mb-7">
+        <span class="w-2 h-2 rounded-full bg-green-400"></span>
+        <span class="text-white/90 text-sm">
+          Open for coffee & good vibes
+        </span>
+      </div>
+
+      <h1 class="font-display text-white text-5xl md:text-7xl lg:text-8xl leading-[.95] font-bold">
+        Kopi Enak.
+        <br>
+        <span class="text-[#d6a354]">Cerita Hebat.</span>
+      </h1>
+
+      <p class="text-white/75 text-lg md:text-xl max-w-xl mt-7 leading-relaxed">
+        Selamat datang di <strong class="text-white">Cafe Laws Coffee</strong>.
+        Tempat nyaman untuk menikmati kopi pilihan, makanan lezat,
+        dan waktu terbaik bersama orang-orang tersayang.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 mt-9">
+
+        <a
+          href="#menu"
+          class="bg-[#d6a354] text-[#1c130d] px-7 py-4 rounded-full font-bold text-center hover:bg-white transition"
+        >
+          Lihat Menu →
+        </a>
+
+        <a
+          href="https://wa.me/6289625146521?text=Halo%20Cafe%20Laws%20Coffee%2C%20saya%20ingin%20memesan."
+          target="_blank"
+          class="border border-white/30 text-white px-7 py-4 rounded-full font-bold text-center hover:bg-white hover:text-[#1c130d] transition"
+        >
+          Order via WhatsApp
+        </a>
+
+      </div>
+
+      <div class="grid grid-cols-3 gap-6 mt-14 max-w-xl">
+
+        <div>
+          <div class="text-[#d6a354] text-2xl font-bold">Fresh</div>
+          <div class="text-white/50 text-sm mt-1">Every day</div>
+        </div>
+
+        <div>
+          <div class="text-[#d6a354] text-2xl font-bold">20+</div>
+          <div class="text-white/50 text-sm mt-1">Pilihan menu</div>
+        </div>
+
+        <div>
+          <div class="text-[#d6a354] text-2xl font-bold">2026</div>
+          <div class="text-white/50 text-sm mt-1">Menu terbaru</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================================
+     QUICK INFO
+========================================================= -->
+<section class="bg-[#6f4528] text-white">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-7">
+
+    <div class="grid md:grid-cols-3 gap-6">
+
+      <div class="flex items-center gap-4">
+        <div class="text-3xl">📍</div>
+        <div>
+          <div class="text-white/50 text-xs uppercase tracking-widest">
+            Lokasi
+          </div>
+          <div class="font-semibold">
+            Jl. Setiabudi RT07 RW12
+          </div>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <div class="text-3xl">📱</div>
+        <div>
+          <div class="text-white/50 text-xs uppercase tracking-widest">
+            WhatsApp
+          </div>
+          <a
+            href="https://wa.me/6289625146521"
+            class="font-semibold hover:text-[#d6a354]"
+          >
+            0896-2514-6521
+          </a>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <div class="text-3xl">☕</div>
+        <div>
+          <div class="text-white/50 text-xs uppercase tracking-widest">
+            Specialty
+          </div>
+          <div class="font-semibold">
+            Coffee & Comfort Food
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================================
+     MENU
+========================================================= -->
+<section id="menu" class="py-24 bg-[#f8f3ea]">
+
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+
+    <div class="text-center max-w-2xl mx-auto mb-14">
+
+      <div class="gold-line mx-auto mb-5"></div>
+
+      <p class="text-[#9a6b3f] uppercase tracking-[.25em] text-sm font-bold">
+        Our Menu
+      </p>
+
+      <h2 class="font-display text-4xl md:text-5xl font-bold mt-3">
+        Favorit di Cafe Laws
+      </h2>
+
+      <p class="text-gray-500 mt-5">
+        Pilihan kopi, minuman segar, dan makanan yang cocok
+        menemani aktivitas Anda.
+      </p>
+
+    </div>
+
+
+    <!-- Category -->
+    <div class="flex flex-wrap justify-center gap-3 mb-12">
+
+      <button
+        class="filter-btn active px-5 py-2.5 rounded-full bg-[#6f4528] text-white"
+        data-filter="all"
+      >
+        Semua
+      </button>
+
+      <button
+        class="filter-btn px-5 py-2.5 rounded-full bg-white text-gray-600 hover:bg-[#6f4528] hover:text-white transition"
+        data-filter="coffee"
+      >
+        Coffee
+      </button>
+
+      <button
+        class="filter-btn px-5 py-2.5 rounded-full bg-white text-gray-600 hover:bg-[#6f4528] hover:text-white transition"
+        data-filter="noncoffee"
+      >
+        Non Coffee
+      </button>
+
+      <button
+        class="filter-btn px-5 py-2.5 rounded-full bg-white text-gray-600 hover:bg-[#6f4528] hover:text-white transition"
+        data-filter="food"
+      >
+        Food
+      </button>
+
+      <button
+        class="filter-btn px-5 py-2.5 rounded-full bg-white text-gray-600 hover:bg-[#6f4528] hover:text-white transition"
+        data-filter="snack"
+      >
+        Snack
+      </button>
+
+    </div>
+
+
+    <!-- Product Grid -->
+    <div id="menuGrid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+
+      <!-- Coffee 1 -->
+      <article class="coffee-card menu-item bg-white rounded-3xl overflow-hidden" data-category="coffee">
+
+        <div class="h-60 overflow-hidden">
+          <img
+            src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=80"
+            alt="Cafe Latte"
+            class="w-full h-full object-cover"
+          >
+        </div>
+
+        <div class="p-5">
+
+          <span class="text-xs uppercase tracking-widest text-[#9a6b3f] font-bold">
+            Coffee
+          </span>
+
+          <h3 class="font-display text-2xl font-bold mt-2">
+            Cafe Latte
+          </h3>
+
+          <p class="text-gray-500 text-sm mt-2">
+            Espresso lembut dengan steamed milk creamy.
+          </p>
+
+          <div class="flex justify-between items-center mt-5">
+            <span class="text-[#6f4528] font-bold text-lg">
+              Rp22.000
+            </span>
+
+            <button
+              onclick="order('Cafe Latte', 'Rp22.000')"
+              class="w-10 h-10 rounded-full bg-[#f1e6d5] hover:bg-[#6f4528] hover:text-white transition"
+            >
+              +
+            </button>
+          </div>
+
+        </div>
+      </article>
+
+
+      <!-- Coffee 2 -->
+      <article class="coffee-card menu-item bg-white rounded-3xl overflow-hidden" data-category="coffee">
+
+        <div class="h-60 overflow-hidden">
+          <img
+            src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=900&q=80"
+            alt="Iced Coffee"
+            class="w-full h-full object-cover"
+          >
+        </div>
+
+        <div class="p-5">
+
+          <span class="text-xs uppercase tracking-widest text-[#9a6b3f] font-bold">
+            Coffee
+          </span>
+
+          <h3 class="font-display text-2xl font-bold mt-2">
+            Iced Coffee Latte
+          </h3>
+
+          <p class="text-gray-500 text-sm mt-2">
+            Kopi dingin creamy yang cocok untuk siang hari.
+          </p>
+
+          <div class="flex justify-between items-center mt-5">
+            <span class="text-[#6f4528] font-bold text-lg">
+              Rp20.000
+            </span>
+
+            <button
+              onclick="order('Iced Coffee Latte', 'Rp20.000')"
+              class="w-10 h-10 rounded-full bg-[#f1e6d5] hover:bg-[#6f4528] hover:text-white transition"
+            >
+              +
+            </button>
+          </div>
+
+        </div>
+      </article>
+
+
+      <!-- Coffee 3 -->
+      <article class="coffee-card menu-item bg-white rounded-3xl overflow-hidden" data-category="coffee">
+
+        <div class="h-60 overflow-hidden">
+          <img
+            src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=900&q=80"
+            alt="Cappuccino"
+            class="w-full h-full object-cover"
+          >
+        </div>
+
+        <div class="p-5">
+
+          <span class="text-xs uppercase tracking-widest text-[#9a6b3f] font-bold">
+            Coffee
+          </span>
+
+          <h3 class="font-display text-2xl font-bold mt-2">
+            Cappuccino
+          </h3>
+
+          <p class="text-gray-500 text-sm mt-2">
+            Espresso dengan foam susu yang lembut.
+          </p>
+
+          <div class="flex justify-between items-center mt-5">
+            <span class="text-[#6f4528] font-bold text-lg">
+              Rp22.000
+            </span>
+
+            <button
+              onclick="order('Cappuccino', 'Rp22.000')"
+              class="w-10 h-10 rounded-full bg-[#f1e6d5] hover:bg-[#6f4528] hover:text-white transition"
+            >
+              +
+            </button>
+          </div>
+
+        </div>
+      </article>
+
+
+      <!-- Coffee 4 -->
+      <article class="coffee-card menu-item bg-white rounded-3xl overflow-hidden" data-category="coffee">
+
+        <div class="h-60 overflow-hidden">
+          <img
+            src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13?auto=format&fit=crop&w=900&q=80"
+            alt="Americano"
+            class="w-full h-full object-cover"
+          >
+        </div>
+
+        <div class="p-5">
+
+          <span class="text-xs uppercase tracking-widest text-[#9a6b3f] font-bold">
+            Coffee
+          </span>
+
+          <h3 class="font-display text-2xl font-bold mt-2">
+            Americano
+          </h3>
+
+          <p class="text-gray-500 text-sm mt-2">
+            Espresso dan air dengan karakter kopi yang clean.
+          </p>
+
+          <div class="flex justify-between items-center mt-5">
+            <span class="text-[#6f4528] font-bold text-lg">
+              Rp18.000
+            </span>
+
+            <button
+              onclick="order('Americano', 'Rp18.000')"
+              class="w-10 h-10 rounded-full bg-[#f1e6d5] hover:bg-[#6f4528] hover:text-white transition"
+            >
+              +
+            </button>
+          </div>
+
+        </div>
+      </article>
+
+
+      <!-- Non Coffee -->
+      <article class="coffee-card menu-item bg-white rounded-3xl overflow-hidden" data-category="noncoffee">
+
+        <div class="h-60 overflow-hidden">
+          <img
+            src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=900&q=80"
+            alt="Matcha Latte"
+            class="w-full h-full object-cover"
+          >
+        </div>
+
+        <div class="p-5">
+
+          <span class="text-xs uppercase tracking-widest text-[#9a6b3f] font-bold">
+            Non Coffee
+          </span>
+
+          <h3 class="font-display text-2xl font-bold mt-2">
+            Matcha Latte
+          </h3>
+
+          <p class="text-gray-500 text-sm mt-2">
+            Matcha creamy dengan rasa earthy yang lembut.
+          </p>
+
+          <div class="flex justify-between items-center mt-5">
+            <span class="text-[#6f4528] font-bold text-lg">
+              Rp24.000
+            </span>
+
+            <button
+              onclick="order('Matcha Latte', 'Rp24.000')"
+              class="w-10 h-10 rounded-full bg-[#f1e6d5] hover:bg-[#6f4528] hover:text-white transition"
+            >
+              +
+            </button>
+          </div>
+
+        </div>
+      </article>
+
+
+      <!-- Non Coffee -->
+      <article class="coffee-card menu-item bg-white rounded-3xl overflow-hidden" data-category="noncoffee">
+
+        <div class="h-60 overflow-hidden">
+          <img
+            src="https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?auto=format&fit=crop&w=900&q=80"
+            alt="Chocolate"
+            class="w-full h-full object-cover"
+          >
+        </div>
+
+        <div class="p-5">
+
+          <span class="text-xs uppercase tracking-widest text-[#9a6b3f] font-bold">
+            Non Coffee
+          </span>
+
+          <h3 class="font-display text-2xl font-bold mt-2">
+            Chocolate
+          </h3>
+
+          <p class="text-gray-500 text-sm mt-2">
+            Cokelat creamy untuk teman santai.
+          </p>
+
+          <div class="flex justify-between items-center mt-5">
+            <span class="text-[#6f4528] font-bold text-lg">
+              Rp23.000
+            </span>
+
+            <button
+              onclick="order('Chocolate', 'Rp23.000')"
+              class="w-10 h-10 rounded-full bg-[#f1e6d5] hover:bg-[#6f4528] hover:text-white transition"
+            >
+              +
+            </button>
+          </div>
+
+        </div>
+      </article>
+
+
+      <!-- Food -->
+      <article class="coffee-card menu-item bg-white rounded-3xl overflow-hidden" data-category="food">
+
+        <div class="h-60 overflow-hidden">
+          <img
+            src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=80"
+            alt="Rice Bowl"
+            class="w-full h-full object-cover"
+          >
+        </div>
+
+        <div class="p-5">
+
+          <span class="text-xs uppercase tracking-widest text-[#9a6b3f] font-bold">
+            Food
+          </span>
+
+          <h3 class="font-display text-2xl font-bold mt-2">
+            Chicken Rice Bowl
+          </h3>
+
+          <p class="text-gray-500 text-sm mt-2">
+            Nasi hangat dengan ayam dan saus spesial.
+          </p>
+
+          <div class="flex justify-between items-center mt-5">
+            <span class="text-[#6f4528] font-bold text-lg">
+              Rp28.000
+            </span>
+
+            <button
+              onclick="order('Chicken Rice Bowl', 'Rp28.000')"
+              class="w-10 h-10 rounded-full bg-[#f1e6d5] hover:bg-[#6f4528] hover:text-white transition"
+            >
+              +
+            </button>
+          </div>
+
+        </div>
+      </article>
+
+
+      <!-- Snack -->
+      <article class="coffee-card menu-item bg-white rounded-3xl overflow-hidden" data-category="snack">
+
+        <div class="h-60 overflow-hidden">
+          <img
+            src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?auto=format&fit=crop&w=900&q=80"
+            alt="Toast"
+            class="w-full h-full object-cover"
+          >
+        </div>
+
+        <div class="p-5">
+
+          <span class="text-xs uppercase tracking-widest text-[#9a6b3f] font-bold">
+            Snack
+          </span>
+
+          <h3 class="font-display text-2xl font-bold mt-2">
+            Toast
+          </h3>
+
+          <p class="text-gray-500 text-sm mt-2">
+            Roti panggang dengan topping pilihan.
+          </p>
+
+          <div class="flex justify-between items-center mt-5">
+            <span class="text-[#6f4528] font-bold te
